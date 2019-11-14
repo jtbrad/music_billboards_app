@@ -1,5 +1,10 @@
 <h1><%= @artist.full_name %></h1>
 <hr />
+
+<div class="secondary menu">
+  <a class="item"><%= link_to "Edit", edit_artist_path(@artist) %></a>
+</div>
+
 <div class="ui list">
   <div class="item"><%= "Age: #{@artist.age}" %></div>
   <div class="item"><%= "From: #{@artist.city}" %></div>
