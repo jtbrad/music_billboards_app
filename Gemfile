@@ -31,6 +31,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'pry-rails' anywhere in the code to stop execution and get a debugger console
   gem "pry-rails"
+
+  # User Faker to generate a development database
+  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 end
 
 group :development do
