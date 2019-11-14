@@ -3,7 +3,7 @@
 <div class="ui list">
   <% @artists.each do |artist| %>
     <div class="item">
-      <%= "#{artist.first_name} #{artist.last_name}" %>
+      <%= link_to "#{artist.first_name} #{artist.last_name}", artist_path(artist) %>
     </div>
   <% end %>
 </div>
