@@ -1,0 +1,24 @@
+<%= form_with(model: artist, local: true, class: "ui form") do |f| %>
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, required: true, placeholder: "First Name" %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, required: true, placeholder: "Last Name" %>
+  </div>
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.text_field :age, required: true, placeholder: "Age" %>
+  </div>
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city, required: true, placeholder: "City" %>
+  </div>
+  <div class="field">
+    <%= f.label :instrument %>
+    <%= f.text_field :instrument, required: true, placeholder: "Instrument" %>
+  </div>
+  <%=f.submit nil, class: "ui button"%>
+
+<% end %>
