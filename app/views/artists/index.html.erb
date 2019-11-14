@@ -1,7 +1,9 @@
-<h1> Artists </h1>
+<h1>Artists</h1>
 
-<ul>
+<div class="ui list">
   <% @artists.each do |artist| %>
-    <%= "#{artist.first_name} #{artist.last_name}"%>
+    <div class="item">
+      <%= "#{artist.first_name} #{artist.last_name}" %>
+    </div>
   <% end %>
-</ul>
+</div>
