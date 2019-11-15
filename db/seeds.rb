@@ -6,17 +6,31 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+def generate_new_db
+  i = 1
 
-Artist.all.each do |artist|
-  artist.destroy
+  Artist.all.destroy_all
+  
+  10.times do
+    artist = Artist.create(
+      first_name: Faker::Name.first_name,
+      last_name: Faker::Name.last_name,
+      age: rand(25..50),
+      city: Faker::Address.city,
+      instrument: Faker::Music.instrument
+    )
+  
+    5.times do
+      artist.songs.create(
+        title: "Song #{i}",
+        genre: Faker::Music.genre
+      )
+    end
+    i += 1
+  end
+
+  puts "New data entered."
+
 end
 
-10.times do
-  Artist.create(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    age: rand(25..50),
-    city: Faker::Address.city,
-    instrument: Faker::Music.instrument
-  )
-end
+generate_new_db
