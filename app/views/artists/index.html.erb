@@ -1,5 +1,9 @@
 <h1>Artists</h1>
 
+<div>
+  <%= link_to "Add New Artist", new_artist_path, class: "ui button" %>
+</div>
+
 <div class="ui list">
   <% @artists.each do |artist| %>
     <div class="item">

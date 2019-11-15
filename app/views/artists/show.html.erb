@@ -2,7 +2,8 @@
 <hr />
 
 <div class="secondary menu">
-  <a class="item"><%= link_to "Edit", edit_artist_path(@artist) %></a>
+  <%= link_to "View Artists", artists_path, class: "ui button" %>
+  <%= link_to "Edit", edit_artist_path(@artist), class: "ui button" %>
 </div>
 
 <div class="ui list">
