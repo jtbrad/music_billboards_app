@@ -1,0 +1,8 @@
+<h1><%= @billboard.name %></h1>
+<hr />
+
+<div class="secondary menu">
+  <%= link_to "Return To Billboards", billboards_path, class: "ui button" %>
+  <%= link_to "Edit", edit_billboard_path(@billboard), class: "ui button" %>
+  <%= link_to "Remove", billboard_path(@billboard), method: :delete, class: "ui button" %>
+</div>

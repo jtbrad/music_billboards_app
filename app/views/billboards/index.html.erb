@@ -1,0 +1,16 @@
+<h1>Billboards</h1>
+
+<hr />
+
+<div>
+  <%= link_to "View Artists", artists_path, class: "ui button" %>
+  <%= link_to "Add New Billboard", new_billboard_path, class: "ui button" %>
+</div>
+
+<div class="ui list">
+  <% @billboards.each do |billboard| %>
+    <div class="item">
+      <%= link_to "#{billboard.name}", billboard_path(billboard) %>
+    </div>
+  <% end %>
+</div>

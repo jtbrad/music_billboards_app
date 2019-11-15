@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 def generate_billboards
+  Billboard.destroy_all
   Billboard.create(name: "Top 10")
   Billboard.create(name: "Top 50")
 end
