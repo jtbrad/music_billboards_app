@@ -1,0 +1,13 @@
+<%= form_with(model: [@artist, @song], local: true, class: "ui form") do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true, placeholder: "Title" %>
+  </div>
+  <div class="field">
+    <%= f.label :genre %>
+    <%= f.text_field :genre, required: true, placeholder: "Genre" %>
+  </div>
+  
+  <%=f.submit nil, class: "item"%>
+
+<% end %>

@@ -25,8 +25,9 @@ def generate_new_db
         title: "Song #{i}",
         genre: Faker::Music.genre
       )
+      i += 1
     end
-    i += 1
+    
   end
 
   puts "New data entered."

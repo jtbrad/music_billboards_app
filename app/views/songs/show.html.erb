@@ -1,0 +1,14 @@
+<h1><%= @song.title %></h1>
+
+<div class="secondary menut">
+  <%= link_to "View Artist", artist_path(@artist), class: "ui button" %>
+  <%= link_to "Add Song", new_artist_song_path(@artist), class: "ui button" %>
+  <%= link_to "Edit Song", edit_artist_song_path(@artist, @song), class: "ui button" %>
+  <%= link_to "Remove Song", artist_song_path(@artist, @song), method: :delete, class: "ui button" %>
+
+</div>
+
+<div class="ui list">
+  <div class="item"><%= "Artist: #{@artist.full_name}"%> </div>
+  <div class="item"><%= "Genre: #{@song.genre}"%> </div>
+</div>
