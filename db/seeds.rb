@@ -17,7 +17,6 @@ def generate_song
     title: "Song #{Song.count + 1}",
     genre: Faker::Music.genre
   )
-  
 end
 
 def generate_artists
