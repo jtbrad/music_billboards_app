@@ -8,15 +8,16 @@
 
 def generate_billboards
   Billboard.destroy_all
-  Billboard.create(name: "Top 10")
-  Billboard.create(name: "Top 50")
+  @top_10 = Billboard.create(name: "Top 10")
+  @top_50 = Billboard.create(name: "Top 50")
 end
 
 def generate_song
-  @artist.songs.create(
+  @song = @artist.songs.create(
     title: "Song #{Song.count + 1}",
     genre: Faker::Music.genre
   )
+  
 end
 
 def generate_artists
